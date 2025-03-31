@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Boas-Vindas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #E3F2FD;
+        }
+
+        /* Cabeçalho */
+        header {
+            background: linear-gradient(to right, #64B5F6, #1E88E5);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #BBDEFB;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            width: 100%; /* Garante que ocupe toda a largura do cabeçalho */
+}
+
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .login i {
+            color: white;
+            font-size: 25px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
+        }
+
+        /* Animação ao passar o mouse */
+        .login i:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+
+        /* Animação ao clicar */
+        .login i:active {
+            transform: rotate(360deg);
+        }
+
+
+        /* Seção de boas-vindas */
+        .welcome  {
+            background: linear-gradient(90deg, #b4ddf0, #0a66cf);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .welcome h2 {
+            color: #333;
+        }
+        .button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            padding: 15px;
+            background: #BBDEFB;
+            border-radius: 10px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            margin: 20px auto; /* Centraliza horizontalmente */
+            text-align: center;
+        }
+
+        .button a{
+            text-decoration: none;
+            color: rgb(1, 91, 175);
+            font-weight: bold;
+          
+          
+        }
+        
+
+
+        .button:hover {
+            background: #90CAF9;
+            transform: translateY(-2px);
+        }
+
+        /* Opções */
+        .opcoes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+
+        .section1 {
+            padding: 10px;
+            background: #BBDEFB;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .section1:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+            background: #90CAF9;
+        }
+
+        .section1 a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .menu {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .opcoes {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="#">Suporte</a>
+            <a href="sobre.html">Sobre nós</a>
+        </nav>
+
+        <div class="login">
+            <a href="perfil.html"><i class='bx bx-user-circle'></a></i>
+        </div>
+    </header>
+
+    <section class="welcome">
+        <h2><i>UM NOVO ALUNO PERDIDO?</i></h2>
+        <div class="button"><a href="login.html">Comece por aqui!</a></div>
+
+    </section>
+
+    <div class="opcoes">
+        <div class="section1"><a href="#">Professores</a></div>
+        <div class="section1"><a href="materias.html">Matérias</a></div>
+        <div class="section1"><a href="#">Cronograma</a></div>
+        <div class="section1"><a href="#">Colégio</a></div>
+        <div class="section1"><a href="#">Atalhos</a></div>
+        <div class="section1"><a href="#">Interclasses</a></div>
+        <div class="section1"><a href="#">Novidade</a></div>
+    </div>
+
+</body>
+</html>

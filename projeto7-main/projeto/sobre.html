@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Página Única</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #111;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background: linear-gradient(to right, #64B5F6, #1E88E5);
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #BBDEFB;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            width: 100%;
+        }
+
+        .menu a, .opcoes a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .menu a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .login i {
+            color: white;
+            font-size: 25px;
+            transition: transform 0.3s ease-in-out, opacity 0.3s;
+        }
+        .login i:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+        .login i:active {
+            transform: rotate(360deg);
+        }
+
+        .section {
+            padding: 40px 20px;
+        }
+
+        .highlight {
+            font-size: 48px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 3px 3px 3px #444;
+        }
+
+        .content-box {
+            background: white;
+            color: black;
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        .carousel {
+            background: #222;
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            display: none;
+            align-items: center;
+            gap: 20px;
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-item.active {
+            display: flex;
+        }
+
+        .carousel-item img {
+            width: 500px;
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        .carousel-text {
+    text-align: left;
+    color: white;
+    max-width: 300px; /* Limite a largura do texto */
+    max-height: 900px; /* Limite a altura do texto */
+    text-overflow: ellipsis; /* Exibe reticências (...) se o texto for longo */
+}
+
+
+
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+    
+        .team-btn {
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #303030;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    
+        .team-btn:hover {
+            background-color: #202020;
+        }
+
+        .prev { left: 10px; }
+        .next { right: 10px; }
+
+    
+    </style>
+</head>
+<body>
+    <header>
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="#">Suporte</a>
+                <a href="sobre.html">Sobre nós</a>
+            </nav>
+        <div class="login">
+            <a href="perfil.html"><i class='bx bx-user-circle'></i></a>
+        </div>
+    </header>
+
+    <div class="section">
+        <div class="highlight">EGÍPCIOS</div>
+        <div class="content-box"></div>
+    </div>
+
+    <div class="carousel">
+        <button class="carousel-button prev" onclick="mudarImagemCarrossel(-1)">&#10094;</button>
+        <div class="slider-container">
+            <div class="carousel-item active">
+                <img src="img/ditadora.jpeg" alt="Rafaele">
+                <div class="carousel-text">
+                    <strong>Rafaele</strong>
+                    <p>Líder (ditadora)</p>
+                    <h4></h4>
+                 </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/filipe.jpeg" alt="Filipe">
+                <div class="carousel-text">
+                    <strong>Filipe</strong>
+                    <p>Secretário (escravo)</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/ana.jpeg" alt="Ana">
+                <div class="carousel-text">
+                    <strong>Ana</strong>
+                    <p>Designer</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/andrey.jpeg" alt="Andrey">
+                <div class="carousel-text">
+                    <strong>Andrey</strong>
+                    <p>Desenhista (escravo)</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/vitor.jpeg" alt="Vitor">
+                <div class="carousel-text">
+                    <strong>Vitor</strong>
+                    <p>Programador (escravo)</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/paulo.jpeg" alt="Paulo">
+                <div class="carousel-text">
+                    <strong>Paulo</strong>
+                    <p>Programador (escravo)</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/gui.jpeg" alt="Guilherme">
+                <div class="carousel-text">
+                    <strong>Guilherme</strong>
+                    <p>Programador (escravo)</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-button next" onclick="mudarImagemCarrossel(1)">&#10095;</button>
+    </div>
+    <div class="buttons-container">
+        <button class="team-btn" onclick="showMember(0)">Rafaele</button>
+        <button class="team-btn" onclick="showMember(1)">Filipe</button>
+        <button class="team-btn" onclick="showMember(2)">Ana</button>
+        <button class="team-btn" onclick="showMember(3)">Andrey</button>
+        <button class="team-btn" onclick="showMember(4)">Vitor</button>
+        <button class="team-btn" onclick="showMember(5)">Paulo</button>
+        <button class="team-btn" onclick="showMember(6)">Guilherme</button>
+    </div>
+    
+    <script>
+        function showMember(index) {
+            // Remove a classe 'active' do item atual
+            const items = document.querySelectorAll('.carousel-item');
+            items.forEach(item => item.classList.remove('active'));
+            
+            // Adiciona a classe 'active' ao item do membro selecionado
+            items[index].classList.add('active');
+        }
+  
+        let index = 0;
+        const items = document.querySelectorAll('.carousel-item');
+
+        function mudarImagemCarrossel(direcao) {
+            items[index].classList.remove('active');
+            index = (index + direcao + items.length) % items.length;
+            items[index].classList.add('active');
+        }
+    </script>
+    
+    <div class="section">
+        <div class="highlight">COMO CRIAMOS ESTE SITE?</div>
+        <div class="content-box">texto</div>
+    </div>
+
+
+</body>
+</html>
+
+
+    
+
+
+
+
+
+
